@@ -3,14 +3,12 @@ const next = document.getElementById("next")
 const back = document.getElementById("back")
 // 画像の取得
 const img = document.getElementsByClassName("img")
-// 配列(1番目の要素)
-const img1 = document.getElementsByClassName("img")[0]
 // 数値の指定
 let i = 0
 
 //イベント時に呼び出される関数の定義
 const goNext = () => {
-    if (i === 2) {
+    if (i == 3) {
         img[i].classList.toggle("appear")
         i = 0
         img[i].classList.toggle("appear")
@@ -22,9 +20,9 @@ const goNext = () => {
     }
 }
 const goBack = () => {
-    if (i === 0) {
+    if (i == 0) {
         img[i].classList.toggle("appear")
-        i = 2
+        i = 3
         img[i].classList.toggle("appear")
     } else {
         img[i].classList.toggle("appear")
